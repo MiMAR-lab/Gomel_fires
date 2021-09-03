@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>FIRE</title>
+    <style>
+        label{display: inline-block;width: 170px;}
+        form > div{margin-bottom: 5px;}
+    </style>
+</head>
+<body>
+ 
+    <h2>Таблица Place</h2>
+    <form action="insert_into.php" method="POST">
+        <div>
+            <label for="coord_lat">Широта:</label>
+            <input type="number" id="coord_lat" name="fire_coord_lat" required>
+        </div>
+        <div>
+            <label for="coord_lon">Долгота:</label>
+            <input type="number" id="coord_lon" name="fire_coord_lon" required>
+        </div>
+        <div style="display: inline-block; vertical-align: top;">
+            <label>Регион: </label>
+        </div>
+        <div style="display: inline-block; vertical-align: top;">
+            <input type="checkbox" id="region_gomel" name="fire_region[]" value="Гомель">
+            <label for="region_gomel">Гомель</label><br>
+            <input type="checkbox" id="region_mogilev" name="fire_region[]" value="Могилев">
+            <label for="region_mogilev">Могилев</label><br>
+        </div>
+        <div>
+            <label for="frst_name">Лесхоз:</label>
+            <input type="text" id="frst_name" name="fire_frst_name">
+        </div>
+         <div>
+            <label for="qrt_num">Номер квартала:</label>
+            <input type="text" id="qrt_num" name="fire_qrt_num">
+        </div>
+        <div>
+            <label for="frstr_name">Лесничество:</label>
+            <input type="text" id="frstr_name" name="fire_frstr_name">
+        </div>
+         <div>
+            <label for="srf_act">Плотность загр.:</label>
+            <input type="number" id="srf_act" name="fire_srf_act">
+        </div>
+        <div>
+            <label for="obs_pnt_dist">Расстояние до ПРК, км:</label>
+            <input type="number" id="obs_pnt_dist" name="fire_obs_pnt_dist">
+        </div>
+        <div>
+            <label for="obs_pnt_dir">Направлние до ПРК:</label>
+            <input type="text" id="obs_pnt_dir" name="fire_obs_pnt_dir">
+        </div>      
+        <input type="submit" value="Отправить в БД">
+    </form>
+</body>
+</html>
